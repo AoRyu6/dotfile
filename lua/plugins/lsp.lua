@@ -16,6 +16,7 @@ return {
       "stylelint",
       "rust-analyzer",
       "pint",
+      "emmet-language-server",
     },
   },
 }
