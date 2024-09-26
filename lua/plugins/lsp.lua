@@ -17,6 +17,7 @@ return {
       "rust-analyzer",
       "pint",
       "emmet-language-server",
+      "haml-lint",
     },
   },
 }
