@@ -1,9 +1,5 @@
 return {
-  { "wadackel/vim-dogrun" },
-  { "rmehri01/onenord.nvim" },
-  { "craftzdog/solarized-osaka.nvim" },
-  { "rose-pine/neovim", name = "rose-pine" },
-  { "EdenEast/nightfox.nvim" },
+  { "killitar/obscure.nvim" },
   {
     "2nthony/vitesse.nvim",
     dependencies = {
@@ -11,9 +7,17 @@ return {
     },
   },
   {
+    "scottmckendry/cyberdream.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+  { "olivercederborg/poimandres.nvim" },
+  { "Mofiqul/dracula.nvim" },
+
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "nightfox",
+      -- colorscheme = "catppuccin-latte",
     },
   },
 }
