@@ -18,6 +18,9 @@ return {
       "pint",
       "emmet-language-server",
       "haml-lint",
+      "standardrb",
+      "golangci-lint-langserver",
+      "sqls",
     },
   },
 }
