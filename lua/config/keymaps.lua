@@ -2,7 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 local map = LazyVim.safe_keymap_set
-local Terminal = require("toggleterm.terminal").Terminal
+-- local Terminal = require("toggleterm.terminal").Terminal
 
 function _G.resize_toggleterm_up()
   local win_id = vim.fn.win_getid()
@@ -46,5 +46,5 @@ map("t", "<C-d>", "<Cmd>lua resize_toggleterm_down()<CR>", { noremap = true, sil
 map("t", "<C-o>", "<Cmd>lua toggleterm_toggle_maximize()<CR>", { noremap = true, silent = true })
 map("n", "<Leader>rc", ":lua require('ror.commands').list_commands()<CR>", { silent = true })
 
--- map("t", "<C-l>", [[<Cmd>wincmd l<CR>]])
--- vim.keymap.del("t", "<C-l>")
+map("t", "<C-l>", [[<Cmd>wincmd l<CR>]])
+vim.keymap.del("t", "<C-l>")

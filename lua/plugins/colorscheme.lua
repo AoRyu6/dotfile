@@ -33,11 +33,12 @@ return {
   { "sainnhe/sonokai" },
   { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
   { "projekt0n/github-nvim-theme", name = "github-theme" },
+  { "xiantang/darcula-dark.nvim" },
   {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "industry",
-      colorscheme = "vitesse",
+      colorscheme = "dracula",
       -- colorscheme = "carbonfox",
     },
   },
