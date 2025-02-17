@@ -35,10 +35,18 @@ return {
   { "projekt0n/github-nvim-theme", name = "github-theme" },
   { "xiantang/darcula-dark.nvim" },
   {
+    "craftzdog/solarized-osaka.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      transparent = true,
+    },
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "industry",
-      colorscheme = "dracula",
+      colorscheme = "vitesse",
       -- colorscheme = "carbonfox",
     },
   },
