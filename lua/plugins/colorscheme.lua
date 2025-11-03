@@ -1,20 +1,18 @@
 return {
-
-  {
-    "2nthony/vitesse.nvim",
-    dependencies = {
-      "tjdevries/colorbuddy.nvim",
-    },
-  },
-  { "Mofiqul/dracula.nvim" },
   { "rose-pine/neovim", name = "rose-pine" },
-  { "olivercederborg/poimandres.nvim" },
   { "EdenEast/nightfox.nvim" },
   { "rmehri01/onenord.nvim" },
+  { "Mofiqul/dracula.nvim" },
+  { "rebelot/kanagawa.nvim" },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { "wnkz/monoglow.nvim" },
+  { "datsfilipe/min-theme.nvim" },
+
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-mocha",
+      -- colorscheme = "dracula-soft",
+      colorscheme = "rose-pine",
     },
   },
 }

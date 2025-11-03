@@ -1,25 +1,27 @@
 return {
-  "williamboman/mason.nvim",
+  "mason-org/mason.nvim",
   opts = {
     ensure_installed = {
+      "cspell",
+      -- html
       "html-lsp",
-      "stimulus-language-server",
+      "markuplint",
+      -- "emmet-language-server",
+      -- css
       "css-lsp",
       "css-variables-language-server",
       "cssmodules-language-server",
-      "biome",
-      "stylua",
-      "shfmt",
-      "yamlfmt",
-      "yamllint",
-      "markuplint",
       "stylelint",
-      "rust-analyzer",
-      "pint",
-      "emmet-language-server",
+
+      -- ruby
+      "stimulus-language-server",
       "haml-lint",
-      "golangci-lint-langserver",
-      "sqls",
+
+      -- rust
+      "rust-analyzer",
+
+      -- javascript / typescript
+      "biome",
     },
   },
 }

@@ -48,6 +48,6 @@ return {
       "SagaBorder",
       "SagaNormal",
     },
-    transparent.clear_prefix("NeoTree"),
+    -- transparent.clear_prefix("NeoTree"),
   },
 }

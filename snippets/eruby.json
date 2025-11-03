@@ -1,0 +1,285 @@
+{
+  "ruby-expression(<% %>)": {
+    "prefix": "pr",
+    "body": ["<% $1 %>"],
+    "description": "rails expression(<% %>)"
+  },
+  "ruby-expression-block(<% %>)": {
+    "prefix": "prb",
+    "body": ["<% $1 %>\n\n<% end %>"],
+    "description": "rails expression(<% %>)"
+  },
+  "ruby-expression-block(<%= %>)": {
+    "prefix": "peb",
+    "body": ["<%= $1 %>\n\n<% end %>"],
+    "description": "rails expression(<%= %>)"
+  },
+  "each": {
+    "prefix": "each",
+    "body": [
+      "<% ${1:variable}.each do |${2:loop_variable}| %>",
+      "$3",
+      "<% end %>"
+    ],
+    "description": "rails each"
+  },
+  "form_with": {
+    "prefix": "form_with",
+    "body": [
+      "<%= form_with model: ${1:@model} do |form| %>",
+      "  $0",
+      "<% end %>"
+    ],
+    "description": "Rails form_withブロック"
+  },
+  "form_label": {
+    "prefix": "form.label",
+    "body": ["<%= form.label :${1:attribute} %>"],
+    "description": "form.label"
+  },
+  "form_field": {
+    "prefix": "form.field",
+    "body": ["<%= form.${1:field_type} %>"],
+    "description": "form.field"
+  },
+  "time_zone_select": {
+    "prefix": "time_zone_select",
+    "body": ["<%= form.time_zone_select :${column_name} %>"],
+    "description": "rails time_zone_select"
+  },
+  "range_field": {
+    "prefix": "range_field",
+    "body": [
+      "<%= range_field (:${model_name}, :${column_name}, in: ${1..100}) %>"
+    ],
+    "description": "rails range_field"
+  },
+  "select_tag": {
+    "prefix": "select_tag",
+    "body": ["<%= select_tag (:${id_name}, options_for_select(${options})) %>"],
+    "description": "rails select_tag"
+  },
+  "color_field": {
+    "prefix": "color_field",
+    "body": ["<%= color_field :${id_name} %>"],
+    "description": "rails color_field"
+  },
+  "options_for_select": {
+    "prefix": "options_for_select",
+    "body": [" options_for_select([${options}]) "],
+    "description": "rails options_for_select,options example:[['Lisbon', 1], ['Madrid', 2], ...], 2"
+  },
+  "submit": {
+    "prefix": "form.submit",
+    "body": ["<%= form.submit %>"],
+    "description": "rails form submit"
+  },
+  "number_field": {
+    "prefix": "f.number_field",
+    "body": [
+      "<%= f.number_field (:${id_name}, in: ${1.0..20.0}, step: ${0.5}) %>"
+    ],
+    "description": "rails number_field"
+  },
+  "time_field": {
+    "prefix": "f.time_field",
+    "body": ["<%= f.time_field :${id_name} %>"],
+    "description": "rails time_field"
+  },
+  "hidden_field": {
+    "prefix": "f.hidden_field",
+    "body": ["<%= f.hidden_field :${id_name} %>"],
+    "description": "rails hidden_field"
+  },
+  "email_field": {
+    "prefix": "form.email_field",
+    "body": ["<%= form.email_field :${id_name} %>"],
+    "description": "rails email_field"
+  },
+  "url_field": {
+    "prefix": "form.url_field",
+    "body": ["<%= form.url_field :${id_name} %>"],
+    "description": "rails url_field"
+  },
+  "password_field": {
+    "prefix": "form.password_field",
+    "body": ["<%= form.password_field :${id_name} %>"],
+    "description": "rails password_field"
+  },
+  "text_area": {
+    "prefix": "form.text_area",
+    "body": ["<%= form.text_area :${id_name} %>"],
+    "description": "rails text_area"
+  },
+  "check_box": {
+    "prefix": "form.check_box",
+    "body": ["<%= form.check_box :${id_name} %>"],
+    "description": "rails check_box"
+  },
+  "text_field": {
+    "prefix": "form.text_field",
+    "body": ["<%= form.text_field :${id_name} %>"],
+    "description": "rails text_field"
+  },
+  "date_field": {
+    "prefix": "form.date_field",
+    "body": ["<%= form.date_field :${id_name} %>"],
+    "description": "rails date_field"
+  },
+  "datetime_field": {
+    "prefix": "form.datetime_field",
+    "body": ["<%= form.datetime_field :${id_name} %>"],
+    "description": "rails datetime_field"
+  },
+  "radio_button": {
+    "prefix": "form.radio_button",
+    "body": ["<%= form.radio_button :${name}, :value => \"${value}\" %>"],
+    "description": "rails radio_button,id will be ${name}_${value}"
+  },
+  "input": {
+    "prefix": "form.input",
+    "body": ["<%= form.input :${1:id}, label: \"${2:text}\" %>"],
+    "description": "rails simple_form_for input field"
+  },
+  "render": {
+    "prefix": "render",
+    "body": ["<%= render  \"${path}\" %>"],
+    "description": "rails render"
+  },
+  "render_variable": {
+    "prefix": "render_variable",
+    "body": ["<%= render  \"${path}\", ${variable1}: ${variable2} %>"],
+    "description": "rails render variable"
+  },
+  "link_to(lito)": {
+    "prefix": "link_to",
+    "body": ["<%= link_to  \"${text}\", ${path} %>"],
+    "description": "rails link_to"
+  },
+  "link_to": {
+    "prefix": "lito",
+    "body": ["<%= link_to  \"${text}\", ${path} %>"],
+    "description": "rails link_to"
+  },
+  "link_to class(litoc)": {
+    "prefix": "link_to_class",
+    "body": ["<%= link_to  \"${1:text}\", ${2:path}, class:\"${3:class}\" %>"],
+    "description": "rails link_to"
+  },
+  "link_to class": {
+    "prefix": "litoc",
+    "body": ["<%= link_to  \"${1:text}\", ${2:path}, class:\"${3:class}\" %>"],
+    "description": "rails link_to"
+  },
+  "link_to, method, data(ltmd)": {
+    "prefix": "link_to_method_data",
+    "body": [
+      "<%= link_to \"${1:link_text}\", ${2:path}, method: \"${3:method}\", data:{ ${4:data} } %>"
+    ],
+    "description": "rails link_to"
+  },
+  "link_to, method, data": {
+    "prefix": "ltmd",
+    "body": [
+      "<%= link_to \"${1:link_text}\", ${2:path}, method: \"${3:method}\", data:{ ${4:data} } %>"
+    ],
+    "description": "rails link_to"
+  },
+  "link_to, method, data_class(ltmdc)": {
+    "prefix": "link_to_method_data",
+    "body": [
+      "<%= link_to \"${1:link_text}\", ${2:path}, method: \"${3:method}\", data:{ ${4:data} }, class:\"${5:class}\" %>"
+    ],
+    "description": "rails link_to"
+  },
+  "link_to, method, data_class": {
+    "prefix": "ltmdc",
+    "body": [
+      "<%= link_to \"${1:link_text}\", ${2:path}, method: \"${3:method}\", data:{ ${4:data} }, class:\"${5:class}\" %>"
+    ],
+    "description": "rails link_to"
+  },
+  "link_to, method, confirm(ltmdc)": {
+    "prefix": "link_to_method_confirm",
+    "body": [
+      "<%= link_to \"${1:link_text}\", ${2:path}, method: \"${3:method}\", data:{ confirm: \"${4:confirm}\"} %>"
+    ],
+    "description": "rails link_to"
+  },
+  "link_to, method, confirm": {
+    "prefix": "ltmdc",
+    "body": [
+      "<%= link_to \"${1:link_text}\", ${2:path}, method: \"${3:method}\", data:{ confirm: \"${4:confirm}\"} %>"
+    ],
+    "description": "rails link_to"
+  },
+  "link_to, method, confirm_class(ltmdcc)": {
+    "prefix": "link_to_method_confirm",
+    "body": [
+      "<%= link_to \"${1:link_text}\", ${2:path}, method: \"${3:method}\", data:{ confirm: \"${4:confirm}\"}, class:\"${5:class}\" %>"
+    ],
+    "description": "rails link_to"
+  },
+  "link_to, method, confirm_class": {
+    "prefix": "ltmdcc",
+    "body": [
+      "<%= link_to \"${1:link_text}\", ${2:path}, method: \"${3:method}\", data:{ confirm: \"${4:confirm}\"}, class:\"${5:class}\" %>"
+    ],
+    "description": "rails link_to"
+  },
+  "path": {
+    "prefix": "path",
+    "body": ["${1:path}_path"],
+    "description": "rails path"
+  },
+  "new_path": {
+    "prefix": "new_path",
+    "body": ["new_${1:path}_path"],
+    "description": "rails new_path"
+  },
+  "edit_path": {
+    "prefix": "edit_path",
+    "body": ["edit_${1:path}_path(${2:variable})"],
+    "description": "rails edit_path(variable)"
+  },
+  "if": {
+    "prefix": "if",
+    "body": ["<% if $1 %>\n  $2\n<% end %>"],
+    "description": "rails if"
+  },
+  "if else": {
+    "prefix": "if else",
+    "body": ["<% if $1 %>\n  $2\n<% else %>\n  $3\n<% end %>"],
+    "description": "rails if else"
+  },
+  "if elsif": {
+    "prefix": "if elsif",
+    "body": ["<% if $1 %>\n  $2\n<% elsif $3 %>\n  $4\n<% end %>"],
+    "description": "rails if elsif"
+  },
+  "if elsif else": {
+    "prefix": "if elsif else",
+    "body": [
+      "<% if $1 %>\n  $2\n<% elsif $3 %>\n  $4\n<% else %>\n  $5\n<% end %>"
+    ],
+    "description": "rails if elsif else"
+  },
+  "erb_output": {
+    "prefix": "pe",
+    "body": ["<%= $1 %>"],
+    "description": "ERB出力タグ"
+  },
+  "button_to": {
+    "prefix": "button_to",
+    "body": ["<%= button_to \"${1:Button Text}\", ${2:path} %>"],
+    "description": "Rails button_to helper"
+  },
+  "picture_tag": {
+    "prefix": "picture_tag",
+    "body": "<%= picture_tag ${1} %>"
+  },
+  "image_tag": {
+    "prefix": "image_tag",
+    "body": "<%= image_tag ${1}, alt: \"${2}\", height: ${3}, width: ${4} %>"
+  }
+}
